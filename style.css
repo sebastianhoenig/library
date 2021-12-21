@@ -1,0 +1,225 @@
+body {
+  margin: 0;
+  background-color: rgb(155, 155, 155);
+}
+
+.header {
+  display: flex;
+  background-color: rgb(208, 236, 227);
+  border-bottom: 1px solid black;
+  margin: 0;
+  height: 15vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.header h1 {
+  width: 110px;
+  margin-left: 200px;
+  margin-right: auto;
+  text-transform: uppercase;
+  font-size: 3.5em;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: bolder;
+  color: rgb(17, 16, 16);
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  background-color: rgb(208, 236, 227);
+  width: 350px;
+  height: 50vh;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 999;
+  padding: 30px 30px;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header h1 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.modal-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputs {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.inputs #title {
+  font-size: 30px;
+  width: 200px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-transform: uppercase;
+}
+
+.inputs #author {
+  font-size: 30px;
+  width: 200px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-transform: uppercase;
+}
+
+.inputs #pages {
+  font-size: 30px;
+  width: 200px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-transform: uppercase;
+}
+
+.inputs[type="text"]:focus {
+  border: 3px solid rgb(41, 20, 117);
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+
+.modal-button {
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.submit-button {
+  padding: 5px 10px;
+  text-transform: uppercase;
+  border-radius: 15px;
+  border-color: #031c25;
+  border-width: 2px;
+  color: rgb(34, 32, 32);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  cursor: pointer;
+  background-color: rgb(162, 212, 24);
+}
+
+.library {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 25px;
+  width: 200px;
+  height: 250px;
+  background-color: rgba(255, 248, 220, 0.692);
+}
+
+.card h3 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.card .author {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-transform: uppercase;
+  font-style: italic;
+  text-align: center;
+}
+
+.card .pages {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.096);
+  pointer-events: none;
+}
+
+#overlay.active {
+  pointer-events: all;
+  opacity: 1;
+}
+
+.read {
+  background-color: rgb(23, 94, 23);
+}
+
+.unread {
+  background-color: rgb(197, 25, 25);
+}
+
+.subheader {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#add {
+  width: 250px;
+  height: 80px;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  font-size: xx-large;
+  background-color: rgb(47, 159, 163);
+  border-radius: 15px;
+  border-color: #031c25;
+  border-width: 2px;
+  color: rgb(34, 32, 32);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  cursor: pointer;
+}
+
+#add:hover {
+  background-color: rgba(47, 159, 163, 0.8);
+}
+
+.read-button {
+  padding: 5px 10px;
+  text-transform: uppercase;
+  border-radius: 15px;
+  border-color: #031c25;
+  border-width: 2px;
+  color: rgb(34, 32, 32);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  cursor: pointer;
+}
+
+.delete-book {
+  padding: 5px 10px;
+  text-transform: uppercase;
+  border-radius: 15px;
+  border-color: #031c25;
+  border-width: 2px;
+  color: rgb(34, 32, 32);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  cursor: pointer;
+  background-color: chocolate;
+  margin-top: 10px;
+}

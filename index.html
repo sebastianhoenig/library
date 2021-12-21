@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Library</h1>
+    </div>
+    <div class="subheader">
+      <button id="add">Add Book</button>
+    </div>
+    <div class="library"></div>
+    <div class="modal-container">
+      <div class="modal">
+        <div class="modal-header">
+          <h1>Add Book</h1>
+        </div>
+        <div class="modal-body">
+          <form class="form">
+            <div class="inputs">
+              <input id="title" name="title" type="text" placeholder="Title" />
+            </div>
+            <div class="inputs">
+              <input
+                id="author"
+                name="author"
+                type="text"
+                placeholder="Author"
+              />
+            </div>
+            <div class="inputs">
+              <input
+                id="pages"
+                name="pages"
+                type="number"
+                min="1"
+                max="9999"
+                placeholder="Pages"
+              />
+            </div>
+            <div class="modal-buttons">
+              <button
+                class="read-button unread modal-button"
+                id="read"
+                type="button"
+              >
+                Book not read
+              </button>
+              <button class="submit-button modal-button" type="submit">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="overlay"></div>
+    <script src="index.js"></script>
+  </body>
+</html>
