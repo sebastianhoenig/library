@@ -21,9 +21,16 @@
           <h1>Add Book</h1>
         </div>
         <div class="modal-body">
-          <form class="form">
+          <form class="form" novalidate>
             <div class="inputs">
-              <input id="title" name="title" type="text" placeholder="Title" />
+              <input
+                id="title"
+                name="title"
+                type="text"
+                placeholder="Title"
+                required
+              />
+              <span class="error"></span>
             </div>
             <div class="inputs">
               <input
@@ -31,7 +38,9 @@
                 name="author"
                 type="text"
                 placeholder="Author"
+                required
               />
+              <span class="error"></span>
             </div>
             <div class="inputs">
               <input
@@ -41,7 +50,9 @@
                 min="1"
                 max="9999"
                 placeholder="Pages"
+                required
               />
+              <span class="error"></span>
             </div>
             <div class="modal-buttons">
               <button
