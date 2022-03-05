@@ -56,6 +56,8 @@ body {
 }
 
 .inputs {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 20px;
   width: 100%;
 }
@@ -222,4 +224,31 @@ body {
   cursor: pointer;
   background-color: chocolate;
   margin-top: 10px;
+}
+
+input:invalid {
+  border-color: #900;
+  background-color: #fdd;
+}
+
+input:focus:invalid {
+  outline: none;
+  border-color: #031c25;
+  background-color: white;
+}
+
+.error {
+  width: 100%;
+  padding: 0;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+
+  box-sizing: border-box;
+}
+
+.error.active {
+  padding: 0.3em;
 }
